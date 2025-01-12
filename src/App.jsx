@@ -36,18 +36,6 @@ const App = () => {
     }
   };
 
-  // Handle Edit User
-  // const handleEdit = (id, updatedData) => {
-  //   axios
-  //     .put(`https://dummyjson.com/users/${id}`, updatedData)
-  //     .then((res) => {
-  //       setUserDetails(
-  //         userDetails.map((user) => (user.id === id ? res.data : user))
-  //       );
-  //     })
-  //     .catch((error) => console.error("Error editing user:", error));
-  // };
-
   return (
     <>
       <h1 className="text-center py-5">User Table Data</h1>
@@ -58,6 +46,7 @@ const App = () => {
           postPerPage={postPerPage}
           setCurrentPage={setCurrentPage}
           currentPage={currentPage}
+          handleDelete={handleDelete}
         />
       ) : (
         <div className="display-4 text-center">Loading API data...</div>
